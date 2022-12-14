@@ -1,19 +1,17 @@
 
 import './App.css';
 import PropTypes from 'prop-types'
-
 import { Navbar } from "./myComponents/Navbar";
 import { TextForm } from './myComponents/TextForm';
 import About from './myComponents/About';
 import Alert from './myComponents/Alert';
 import React, { useState } from "react";
 
-
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 function App() {
 
@@ -86,7 +84,7 @@ function App() {
 
 
 
-    <Router>
+    // <Router>
     <>
 
 
@@ -94,19 +92,21 @@ function App() {
 
       <Navbar title="Dgitools" aboutText="About Us" switchMode={mode} toggleDark={togleDark} toggleBlue={togleBlue} />
       <Alert alert={alert} switchMode={mode} />
+      <TextForm heading="Case Converters" switchMode={mode} showAlert={showAlert} />
+      <About mode ={mode} />
      
 
 
 
 
-      <Routes>
-        <Route path='/' element={ <TextForm heading="Case Converters" switchMode={mode} showAlert={showAlert} /> }>
+      {/* <Routes>
+        <Route path='/' element={ }>
 
         </Route>
-        <Route path='/about' element={<About mode ={mode} />}>
+        <Route path='/about' element={}>
         </Route>
 
-      </Routes>
+      </Routes> */}
 
 
 
@@ -114,7 +114,7 @@ function App() {
 
     </>
 
-    </Router>
+    // </Router>
   );
 }
 
